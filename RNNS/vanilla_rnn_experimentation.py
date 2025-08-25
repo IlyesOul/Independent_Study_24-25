@@ -69,7 +69,6 @@ recurrent_network = tensorflow.keras.Sequential([
 ])
 
 # Training and compiling network
-
 recurrent_network.compile(loss="mean_squared_error", optimizer="adam", metrics=["mean_squared_error", "accuracy"])
 recurrent_network.fit(training_x, training_y, epochs=30, verbose='auto', callbacks=[tensorflow.keras.callbacks.EarlyStopping(patience=3)])
 
